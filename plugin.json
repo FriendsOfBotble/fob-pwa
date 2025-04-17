@@ -1,0 +1,11 @@
+{
+    "id": "friendsofbotble/fob-pwa",
+    "name": "FOB PWA Support",
+    "namespace": "FriendsOfBotble\\Pwa\\",
+    "provider": "FriendsOfBotble\\Pwa\\Providers\\PwaServiceProvider",
+    "author": "Friends Of Botble",
+    "url": "https://friendsofbotble.com",
+    "version": "1.0.0",
+    "description": "Progressive Web App (PWA) support for all themes",
+    "minimum_core_version": "7.3.0"
+}
