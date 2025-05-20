@@ -19,6 +19,11 @@ return [
         'display' => 'Display Mode',
         'orientation' => 'Orientation',
         'save_settings' => 'Save Settings',
+        'advanced_settings' => 'Advanced Settings',
+        'enable_notifications' => 'Enable Notifications',
+        'enable_notifications_description' => 'Allow the PWA to request notification permissions from users',
+        'show_install_prompt' => 'Show Install Prompt',
+        'show_install_prompt_description' => 'Display a prompt encouraging users to install the PWA on their device',
         'display_options' => [
             'fullscreen' => 'Fullscreen',
             'standalone' => 'Standalone',

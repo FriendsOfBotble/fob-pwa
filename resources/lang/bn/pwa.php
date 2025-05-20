@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'name' => 'পিডব্লিউএ সমর্থন',
+    'description' => 'সমস্ত থিমের জন্য প্রগতিশীল ওয়েব অ্যাপ (PWA) সমর্থন',
+    'settings' => [
+        'title' => 'পিডব্লিউএ সেটিংস',
+        'description' => 'প্রগতিশীল ওয়েব অ্যাপ (PWA) সেটিংস কনফিগার করুন',
+        'enable' => 'পিডব্লিউএ সক্ষম করুন',
+        'app_name' => 'অ্যাপের নাম',
+        'app_name_placeholder' => 'আপনার অ্যাপ্লিকেশনের নাম',
+        'short_name' => 'সংক্ষিপ্ত নাম',
+        'short_name_placeholder' => 'আপনার অ্যাপের জন্য সংক্ষিপ্ত নাম',
+        'theme_color' => 'থিম রঙ',
+        'background_color' => 'পটভূমির রঙ',
+        'icon' => 'অ্যাপ আইকন',
+        'icon_description' => 'এই আইকনটি PWA-এর জন্য ব্যবহার করা হবে। সুপারিশকৃত আকার: 512x512px',
+        'start_url' => 'শুরুর URL',
+        'display' => 'প্রদর্শন মোড',
+        'orientation' => 'অভিমুখ',
+        'save_settings' => 'সেটিংস সংরক্ষণ করুন',
+        'advanced_settings' => 'উন্নত সেটিংস',
+        'enable_notifications' => 'বিজ্ঞপ্তি সক্ষম করুন',
+        'enable_notifications_description' => 'PWA-কে ব্যবহারকারীদের কাছ থেকে বিজ্ঞপ্তি অনুমতি অনুরোধ করার অনুমতি দিন',
+        'show_install_prompt' => 'ইনস্টল প্রম্পট দেখান',
+        'show_install_prompt_description' => 'ব্যবহারকারীদের তাদের ডিভাইসে PWA ইনস্টল করতে উৎসাহিত করার জন্য একটি প্রম্পট প্রদর্শন করুন',
+        'display_options' => [
+            'fullscreen' => 'পূর্ণ স্ক্রীন',
+            'standalone' => 'স্বতন্ত্র',
+            'minimal_ui' => 'সর্বনিম্ন UI',
+            'browser' => 'ব্রাউজার',
+        ],
+        'orientation_options' => [
+            'any' => 'যেকোনো',
+            'natural' => 'প্রাকৃতিক',
+            'landscape' => 'ল্যান্ডস্কেপ',
+            'portrait' => 'পোর্ট্রেট',
+        ],
+    ],
+];

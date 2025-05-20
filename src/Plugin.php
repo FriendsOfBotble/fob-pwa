@@ -20,6 +20,8 @@ class Plugin extends PluginOperationAbstract
             'pwa_start_url',
             'pwa_display',
             'pwa_orientation',
+            'pwa_enable_notifications',
+            'pwa_show_install_prompt',
         ];
 
         Setting::delete($keys);

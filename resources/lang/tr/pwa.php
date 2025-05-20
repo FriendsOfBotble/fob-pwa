@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'name' => 'PWA Desteği',
+    'description' => 'Tüm temalar için Progresif Web Uygulaması (PWA) desteği',
+    'settings' => [
+        'title' => 'PWA Ayarları',
+        'description' => 'Progresif Web Uygulaması (PWA) ayarlarını yapılandırın',
+        'enable' => 'PWA\'yı Etkinleştir',
+        'app_name' => 'Uygulama Adı',
+        'app_name_placeholder' => 'Uygulamanızın adı',
+        'short_name' => 'Kısa Ad',
+        'short_name_placeholder' => 'Uygulamanız için kısa ad',
+        'theme_color' => 'Tema Rengi',
+        'background_color' => 'Arka Plan Rengi',
+        'icon' => 'Uygulama Simgesi',
+        'icon_description' => 'Bu simge PWA için kullanılacaktır. Önerilen boyut: 512x512px',
+        'start_url' => 'Başlangıç URL\'si',
+        'display' => 'Görüntüleme Modu',
+        'orientation' => 'Yönlendirme',
+        'save_settings' => 'Ayarları Kaydet',
+        'advanced_settings' => 'Gelişmiş Ayarlar',
+        'enable_notifications' => 'Bildirimleri Etkinleştir',
+        'enable_notifications_description' => 'PWA\'nın kullanıcılardan bildirim izinleri istemesine izin verin',
+        'show_install_prompt' => 'Yükleme İstemini Göster',
+        'show_install_prompt_description' => 'Kullanıcıları PWA\'yı cihazlarına yüklemeleri için teşvik eden bir istem görüntüleyin',
+        'display_options' => [
+            'fullscreen' => 'Tam Ekran',
+            'standalone' => 'Bağımsız',
+            'minimal_ui' => 'Minimal Arayüz',
+            'browser' => 'Tarayıcı',
+        ],
+        'orientation_options' => [
+            'any' => 'Herhangi biri',
+            'natural' => 'Doğal',
+            'landscape' => 'Yatay',
+            'portrait' => 'Dikey',
+        ],
+    ],
+];

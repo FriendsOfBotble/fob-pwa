@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'name' => 'Hỗ trợ PWA',
+    'description' => 'Hỗ trợ Ứng dụng Web Tiến bộ (PWA) cho tất cả các giao diện',
+    'settings' => [
+        'title' => 'Cài đặt PWA',
+        'description' => 'Cấu hình cài đặt Ứng dụng Web Tiến bộ (PWA)',
+        'enable' => 'Bật PWA',
+        'app_name' => 'Tên Ứng dụng',
+        'app_name_placeholder' => 'Tên ứng dụng của bạn',
+        'short_name' => 'Tên Ngắn',
+        'short_name_placeholder' => 'Tên ngắn cho ứng dụng của bạn',
+        'theme_color' => 'Màu Chủ đề',
+        'background_color' => 'Màu Nền',
+        'icon' => 'Biểu tượng Ứng dụng',
+        'icon_description' => 'Biểu tượng này sẽ được sử dụng cho PWA. Kích thước khuyến nghị: 512x512px',
+        'start_url' => 'URL Bắt đầu',
+        'display' => 'Chế độ Hiển thị',
+        'orientation' => 'Hướng',
+        'save_settings' => 'Lưu Cài đặt',
+        'advanced_settings' => 'Cài đặt Nâng cao',
+        'enable_notifications' => 'Bật Thông báo',
+        'enable_notifications_description' => 'Cho phép PWA yêu cầu quyền thông báo từ người dùng',
+        'show_install_prompt' => 'Hiển thị Lời nhắc Cài đặt',
+        'show_install_prompt_description' => 'Hiển thị lời nhắc khuyến khích người dùng cài đặt PWA trên thiết bị của họ',
+        'display_options' => [
+            'fullscreen' => 'Toàn màn hình',
+            'standalone' => 'Độc lập',
+            'minimal_ui' => 'UI Tối giản',
+            'browser' => 'Trình duyệt',
+        ],
+        'orientation_options' => [
+            'any' => 'Bất kỳ',
+            'natural' => 'Tự nhiên',
+            'landscape' => 'Ngang',
+            'portrait' => 'Dọc',
+        ],
+    ],
+];

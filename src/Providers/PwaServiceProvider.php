@@ -15,6 +15,7 @@ class PwaServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->register(HookServiceProvider::class);
+        $this->app->register(CommandServiceProvider::class);
     }
 
     public function boot(): void

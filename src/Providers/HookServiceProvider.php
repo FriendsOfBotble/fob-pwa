@@ -2,6 +2,7 @@
 
 namespace FriendsOfBotble\Pwa\Providers;
 
+use Botble\Base\Facades\AdminHelper;
 use Botble\Base\Supports\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
@@ -15,6 +16,11 @@ class HookServiceProvider extends ServiceProvider
 
         $enabled = setting('pwa_enable', false);
         if (! $enabled) {
+            return;
+        }
+
+        // Don't load PWA in admin panel
+        if (AdminHelper::isInAdmin()) {
             return;
         }
 

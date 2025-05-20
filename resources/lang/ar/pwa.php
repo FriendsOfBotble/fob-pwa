@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'name' => 'دعم تطبيقات الويب التقدمية',
+    'description' => 'دعم تطبيقات الويب التقدمية (PWA) لجميع السمات',
+    'settings' => [
+        'title' => 'إعدادات تطبيقات الويب التقدمية',
+        'description' => 'تكوين إعدادات تطبيقات الويب التقدمية (PWA)',
+        'enable' => 'تمكين تطبيقات الويب التقدمية',
+        'app_name' => 'اسم التطبيق',
+        'app_name_placeholder' => 'اسم تطبيقك',
+        'short_name' => 'الاسم المختصر',
+        'short_name_placeholder' => 'اسم مختصر لتطبيقك',
+        'theme_color' => 'لون السمة',
+        'background_color' => 'لون الخلفية',
+        'icon' => 'أيقونة التطبيق',
+        'icon_description' => 'سيتم استخدام هذه الأيقونة لتطبيقات الويب التقدمية. الحجم الموصى به: 512×512 بكسل',
+        'start_url' => 'عنوان URL البدء',
+        'display' => 'وضع العرض',
+        'orientation' => 'الاتجاه',
+        'save_settings' => 'حفظ الإعدادات',
+        'advanced_settings' => 'إعدادات متقدمة',
+        'enable_notifications' => 'تمكين الإشعارات',
+        'enable_notifications_description' => 'السماح لتطبيق الويب التقدمي بطلب أذونات الإشعارات من المستخدمين',
+        'show_install_prompt' => 'إظهار مطالبة التثبيت',
+        'show_install_prompt_description' => 'عرض مطالبة تشجع المستخدمين على تثبيت تطبيق الويب التقدمي على أجهزتهم',
+        'display_options' => [
+            'fullscreen' => 'ملء الشاشة',
+            'standalone' => 'مستقل',
+            'minimal_ui' => 'واجهة مستخدم مصغرة',
+            'browser' => 'متصفح',
+        ],
+        'orientation_options' => [
+            'any' => 'أي',
+            'natural' => 'طبيعي',
+            'landscape' => 'أفقي',
+            'portrait' => 'عمودي',
+        ],
+    ],
+];

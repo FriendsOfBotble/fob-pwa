@@ -1,0 +1,40 @@
+<?php
+
+return [
+    'name' => 'Support PWA',
+    'description' => 'Support d\'Application Web Progressive (PWA) pour tous les thèmes',
+    'settings' => [
+        'title' => 'Paramètres PWA',
+        'description' => 'Configurer les paramètres de l\'Application Web Progressive (PWA)',
+        'enable' => 'Activer PWA',
+        'app_name' => 'Nom de l\'Application',
+        'app_name_placeholder' => 'Nom de votre application',
+        'short_name' => 'Nom Court',
+        'short_name_placeholder' => 'Nom court pour votre application',
+        'theme_color' => 'Couleur du Thème',
+        'background_color' => 'Couleur d\'Arrière-plan',
+        'icon' => 'Icône de l\'Application',
+        'icon_description' => 'Cette icône sera utilisée pour la PWA. Taille recommandée : 512x512px',
+        'start_url' => 'URL de Démarrage',
+        'display' => 'Mode d\'Affichage',
+        'orientation' => 'Orientation',
+        'save_settings' => 'Enregistrer les Paramètres',
+        'advanced_settings' => 'Paramètres Avancés',
+        'enable_notifications' => 'Activer les Notifications',
+        'enable_notifications_description' => 'Autoriser la PWA à demander des autorisations de notification aux utilisateurs',
+        'show_install_prompt' => 'Afficher l\'Invite d\'Installation',
+        'show_install_prompt_description' => 'Afficher une invite encourageant les utilisateurs à installer la PWA sur leur appareil',
+        'display_options' => [
+            'fullscreen' => 'Plein Écran',
+            'standalone' => 'Autonome',
+            'minimal_ui' => 'UI Minimale',
+            'browser' => 'Navigateur',
+        ],
+        'orientation_options' => [
+            'any' => 'N\'importe laquelle',
+            'natural' => 'Naturelle',
+            'landscape' => 'Paysage',
+            'portrait' => 'Portrait',
+        ],
+    ],
+];

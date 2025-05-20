@@ -18,6 +18,8 @@ class PwaSettingRequest extends Request
             'start_url' => 'nullable|string|max:255',
             'display' => 'nullable|string|in:fullscreen,standalone,minimal-ui,browser',
             'orientation' => 'nullable|string|in:any,natural,landscape,portrait',
+            'enable_notifications' => 'nullable|boolean',
+            'show_install_prompt' => 'nullable|boolean',
         ];
     }
 }

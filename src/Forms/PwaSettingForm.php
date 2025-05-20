@@ -104,6 +104,22 @@ class PwaSettingForm extends SettingForm
                         'portrait' => trans('plugins/fob-pwa::pwa.settings.orientation_options.portrait'),
                     ])
             )
+            ->add(
+                'enable_notifications',
+                OnOffCheckboxField::class,
+                OnOffFieldOption::make()
+                    ->label(trans('plugins/fob-pwa::pwa.settings.enable_notifications'))
+                    ->value(setting('pwa_enable_notifications', false))
+                    ->helperText(trans('plugins/fob-pwa::pwa.settings.enable_notifications_description'))
+            )
+            ->add(
+                'show_install_prompt',
+                OnOffCheckboxField::class,
+                OnOffFieldOption::make()
+                    ->label(trans('plugins/fob-pwa::pwa.settings.show_install_prompt'))
+                    ->value(setting('pwa_show_install_prompt', true))
+                    ->helperText(trans('plugins/fob-pwa::pwa.settings.show_install_prompt_description'))
+            )
             ->addCloseCollapsible('enable', '1');
     }
 }
