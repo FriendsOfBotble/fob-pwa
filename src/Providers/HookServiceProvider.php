@@ -4,7 +4,6 @@ namespace FriendsOfBotble\Pwa\Providers;
 
 use Botble\Base\Facades\AdminHelper;
 use Botble\Base\Supports\ServiceProvider;
-use Illuminate\Support\Facades\View;
 
 class HookServiceProvider extends ServiceProvider
 {
@@ -19,7 +18,7 @@ class HookServiceProvider extends ServiceProvider
             return;
         }
 
-        // Don't load PWA in admin panel
+        // Don't load PWA in the admin panel
         if (AdminHelper::isInAdmin()) {
             return;
         }
@@ -28,13 +27,13 @@ class HookServiceProvider extends ServiceProvider
             $themeColor = setting('pwa_theme_color', '#0989ff');
             $appName = setting('pwa_app_name', setting('site_title', 'Progressive Web App'));
 
-            $metaTags = View::make('plugins/fob-pwa::header-meta', compact('themeColor', 'appName'))->render();
+            $metaTags = view('plugins/fob-pwa::header-meta', compact('themeColor', 'appName'))->render();
 
             return $html . $metaTags;
         }, 15);
 
         add_filter(THEME_FRONT_FOOTER, function ($html) {
-            $script = View::make('plugins/fob-pwa::footer-script')->render();
+            $script = view('plugins/fob-pwa::footer-script')->render();
 
             return $html . $script;
         }, 15);
