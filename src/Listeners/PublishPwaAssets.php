@@ -77,10 +77,22 @@ class PublishPwaAssets
             // Generate and save the manifest.json file
             $this->generateManifestJson();
 
-            // Copy the service-worker.js file
+            // Copy and update the service-worker.js file with dynamic cache name
             if (File::exists($source . '/service-worker.js')) {
-                File::copy($source . '/service-worker.js', public_path('service-worker.js'));
-                Log::info('PWA: Service worker file copied successfully');
+                $content = File::get($source . '/service-worker.js');
+
+                // Replace the cache name with a dynamic one based on CMS version
+                $newCacheName = pwa_get_cache_version();
+
+                // Use regex to replace any existing cache name pattern
+                $content = preg_replace(
+                    "/const CACHE_NAME = '[^']*';/",
+                    "const CACHE_NAME = '{$newCacheName}';",
+                    $content
+                );
+
+                File::put(public_path('service-worker.js'), $content);
+                Log::info('PWA: Service worker file copied and updated with cache version: ' . $newCacheName);
             } else {
                 Log::warning('PWA: Service worker file not found at: ' . $source . '/service-worker.js');
             }

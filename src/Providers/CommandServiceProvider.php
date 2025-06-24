@@ -2,6 +2,7 @@
 
 namespace FriendsOfBotble\Pwa\Providers;
 
+use FriendsOfBotble\Pwa\Commands\ClearPwaCacheCommand;
 use FriendsOfBotble\Pwa\Commands\PublishPwaAssetsCommand;
 use Illuminate\Support\ServiceProvider;
 
@@ -12,6 +13,7 @@ class CommandServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->commands([
                 PublishPwaAssetsCommand::class,
+                ClearPwaCacheCommand::class,
             ]);
         }
     }

@@ -14,6 +14,39 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'CACHE_STATUS') {
     CACHE_IGNORED = event.data.isCacheIgnored;
   }
+
+  if (event.data && event.data.type === 'CLEAR_CACHE') {
+    event.waitUntil(
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames.map(cacheName => {
+            return caches.delete(cacheName);
+          })
+        );
+      }).then(() => {
+        // Notify the main thread that cache has been cleared
+        self.clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'CACHE_CLEARED',
+              success: true
+            });
+          });
+        });
+      }).catch(error => {
+        // Notify the main thread about the error
+        self.clients.matchAll().then(clients => {
+          clients.forEach(client => {
+            client.postMessage({
+              type: 'CACHE_CLEARED',
+              success: false,
+              error: error.message
+            });
+          });
+        });
+      })
+    );
+  }
 });
 
 function isCacheableUrl(url) {

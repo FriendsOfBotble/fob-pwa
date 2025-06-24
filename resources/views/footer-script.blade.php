@@ -3,10 +3,14 @@
         isCacheIgnored: false
     };
 
+    let serviceWorkerRegistration = null;
+
     if ("serviceWorker" in navigator) {
         window.addEventListener("load", function() {
             navigator.serviceWorker.register("/service-worker.js")
                 .then(function(registration) {
+                    serviceWorkerRegistration = registration;
+
                     if (registration.active) {
                         registration.active.postMessage({
                             type: 'CACHE_STATUS',
@@ -15,7 +19,27 @@
                     }
                 });
         });
+
+        // Listen for messages from service worker
+        navigator.serviceWorker.addEventListener('message', function(event) {
+            if (event.data && event.data.type === 'CACHE_CLEARED') {
+                if (event.data.success) {
+                    console.log('PWA: Cache cleared successfully');
+                } else {
+                    console.error('PWA: Failed to clear cache:', event.data.error);
+                }
+            }
+        });
     }
+
+    // Function to clear PWA cache
+    window.clearPwaCache = function() {
+        if (serviceWorkerRegistration && serviceWorkerRegistration.active) {
+            serviceWorkerRegistration.active.postMessage({
+                type: 'CLEAR_CACHE'
+            });
+        }
+    };
 
     let deferredPrompt;
     const installButton = document.getElementById('pwa-install-button');
