@@ -55,6 +55,10 @@ function isCacheableUrl(url) {
     let urlObj;
 
     if (url instanceof Request) {
+      // Only cache GET requests
+      if (url.method !== 'GET') {
+        return false;
+      }
       urlObj = new URL(url.url);
       return supportedSchemes.includes(urlObj.protocol) && !isAdminUrl(urlObj);
     }
@@ -165,7 +169,7 @@ self.addEventListener('fetch', event => {
               cacheUrl.search.includes('email=')
             );
 
-            if (shouldCache) {
+            if (shouldCache && event.request.method === 'GET') {
               caches.open(CACHE_NAME)
                 .then(cache => {
                   try {
